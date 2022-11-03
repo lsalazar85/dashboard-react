@@ -1,8 +1,6 @@
 # dashboard-app
 Administrative board app developed with React.js & Typescript
 
-## Technical Considerations
-
 ### Future improvements
 
 ## Deployment app
