@@ -4,12 +4,8 @@ interface props {
   children: JSX.Element | JSX.Element[];
 }
 
-const Layout = ({children}: props) => {
-  return (
-    <>
-      <LayoutContent>{children}</LayoutContent>
-    </>
-  );
-};
+const Layout = ({ children }: props) => (
+  <LayoutContent>{children}</LayoutContent>
+);
 
 export default Layout;

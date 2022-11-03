@@ -4,8 +4,8 @@ export type StateType = {
 };
 
 export type Location = {
-  address1: string
-  city: string
-  zip_code: string
-  country: string
+  address1: string;
+  city: string;
+  zip_code: string;
+  country: string;
 };
