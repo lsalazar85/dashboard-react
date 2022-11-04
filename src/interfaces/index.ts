@@ -2,7 +2,7 @@ import { Location } from '../types';
 
 export interface ImageProps {
   width: string;
-  height: string;
+  height?: string;
   src: string;
   alt: string;
 }

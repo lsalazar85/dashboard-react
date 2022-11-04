@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import { GlobalStyles } from './styles/GlobalStyles';
 
 import App from './App';
 import { Layout } from './components/Layout';
@@ -17,6 +18,7 @@ root.render(
     <Provider store={store}>
       <Router>
         <Layout>
+          <GlobalStyles />
           <App />
         </Layout>
       </Router>
