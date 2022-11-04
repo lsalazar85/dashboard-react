@@ -1,5 +1,81 @@
 {
   "header": {
     "logo": "logo"
+  },
+  "sideBar": [
+    {
+      "page": "dashboard",
+      "available": true,
+      "name": "Dashboard"
+    },
+    {
+      "page": "newInvoice",
+      "available": false,
+      "name": "New Invoice"
+    },
+    {
+      "page": "receivables",
+      "available": true,
+      "name": "Receivables"
+    },
+    {
+      "page": "payables",
+      "available": false,
+      "name": "Payables"
+    },
+    {
+      "page": "clients",
+      "available": false,
+      "name": "Clients"
+    },
+    {
+      "page": "settings",
+      "available": false,
+      "name": "Settings"
+    }
+  ],
+  "headerTable": [
+    {
+      "id": 1,
+      "type": "Client"
+    },
+    {
+      "id": 2,
+      "type": "Payment Status"
+    },
+    {
+      "id": 3,
+      "type": "Cargo Status"
+    },
+    {
+      "id": 4,
+      "type": "Date"
+    },
+    {
+      "id": 5,
+      "type": "Amount"
+    },
+    {
+      "id": 6,
+      "type": "Type of Payment"
+    },
+    {
+      "id": 7,
+      "type": "Installments Payed"
+    },
+    {
+      "id": 8,
+      "type": "Payments Due Date"
+    },
+    {
+      "id": 9,
+      "type": "Actions"
+    }
+  ],
+  "coins": {
+    "dollar": {
+      "MXN": 20.20,
+      "EUR": 0.938748
+    }
   }
 }
