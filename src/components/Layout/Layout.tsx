@@ -1,12 +1,11 @@
-import { LayoutContent, LayoutSide, LayoutWrapper } from './styles';
 import { SideBar } from '../SideBar';
 import { Header } from '../Header';
 
-interface props {
-  children: JSX.Element | JSX.Element[];
-}
+import { LayoutContent, LayoutSide, LayoutWrapper } from './styles';
 
-const Layout = ({ children }: props) => (
+import { ChildrenElement } from '../../interfaces';
+
+const Layout = ({ children }: ChildrenElement) => (
   <LayoutWrapper>
     <SideBar />
     <LayoutSide>

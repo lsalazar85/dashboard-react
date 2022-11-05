@@ -1,4 +1,4 @@
-import { MainRouter } from './components/MainRouter';
+import { MainRouter } from './router';
 
 const App = () => <MainRouter />;
 

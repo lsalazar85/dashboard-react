@@ -2,36 +2,40 @@
   "header": {
     "logo": "logo"
   },
-  "sideBar": [
+  "pages": [
     {
-      "page": "dashboard",
-      "available": true,
-      "name": "Dashboard"
+      "page": "/",
+      "name": "Dashboard",
+      "content": {
+        "title": "Hi"
+      }
     },
     {
       "page": "newInvoice",
-      "available": false,
-      "name": "New Invoice"
+      "name": "New Invoice",
+      "content": {}
     },
     {
       "page": "receivables",
-      "available": true,
-      "name": "Receivables"
+      "name": "Receivables",
+      "content": {
+        "title": "Receivables"
+      }
     },
     {
       "page": "payables",
-      "available": false,
-      "name": "Payables"
+      "name": "Payables",
+      "content": {}
     },
     {
       "page": "clients",
-      "available": false,
-      "name": "Clients"
+      "name": "Clients",
+      "content": {}
     },
     {
       "page": "settings",
-      "available": false,
-      "name": "Settings"
+      "name": "Settings",
+      "content": {}
     }
   ],
   "headerTable": [

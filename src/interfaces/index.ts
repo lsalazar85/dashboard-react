@@ -11,6 +11,11 @@ export interface ChildrenElement {
   children: JSX.Element | JSX.Element[];
 }
 
+export interface IRoute {
+  name: string;
+  page: string;
+}
+
 export interface ButtonProps {
   text: string;
   onClick: () => void;

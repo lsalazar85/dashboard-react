@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import colors from '../../styles/colors';
 
 export const SideBarWrapper = styled.div`
@@ -10,7 +10,7 @@ export const SideBarWrapper = styled.div`
 
 export const LogoWrapper = styled.div`
   width: 100%;
-  padding: 1.3rem;
+  padding: 2.188rem 1.3rem;
   background: ${colors.Blue};
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@ export const SideBarSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 5rem;
 `;
 
 export const MenuList = styled.ul`
@@ -31,25 +31,7 @@ export const MenuList = styled.ul`
   flex-direction: column;
 `;
 
-export const LiElement = styled.li`
-  display: flex;
-  align-items: center;
-  background: ${colors.White};
-  cursor: pointer;
-  padding: 2rem;
-  
-  svg {
-    color: ${colors.LightBlue};
-    margin-right: 1.25rem;
-  }
-  
-  &:hover{
-    background: ${colors.SecondaryLightBlue};
-    svg {
-      color: ${colors.Blue};
-    }
-  }
-`;
+export const IconWrapper = styled.div``;
 
 export const SectionName = styled.span`
     font-size: 0.875rem;
@@ -66,4 +48,44 @@ export const LogOutBtn = styled.button`
   background: transparent;
   font-size: 1rem;
   font-weight: 800;
+`;
+
+export const LiElement = styled.li`
+  display: flex;
+  align-items: center;
+`;
+
+export const SideBarItem = styled.button<{active: boolean, disabled: boolean}>`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: ${colors.White};
+  padding: 2rem;
+
+  svg {
+    color: ${colors.LightBlue};
+    margin-right: 1.25rem;
+  }
+
+  ${(props) => props.active && css`
+    background: ${colors.SecondaryLightBlue};
+    svg {
+      color: ${colors.Blue};
+    }
+  `}
+
+  ${(props) => props.disabled && css`
+    svg {
+      color: ${colors.Gray};
+    }
+  `}
+
+  ${(props) => !props.disabled && css`
+    &:hover{
+      background: ${colors.SecondaryLightBlue};
+      svg {
+        color: ${colors.Blue};
+      }
+    }
+  `}
 `;

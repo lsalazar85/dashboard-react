@@ -14,4 +14,5 @@ export const LayoutContent = styled.div`
 export const LayoutSide = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
