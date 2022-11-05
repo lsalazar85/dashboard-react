@@ -1,6 +1,7 @@
 import logo from '../../images/logo.svg';
 import { Image } from '../UI/Image';
 
+import { ICONS_ORDER } from '../../constants';
 import data from '../../data/data.json';
 
 import {
@@ -11,6 +12,7 @@ import {
   LogOutBtn,
   MenuList,
   LiElement,
+  SectionName,
 } from './styles';
 
 const SideBar = () => {
@@ -19,12 +21,15 @@ const SideBar = () => {
   return (
     <SideBarWrapper>
       <LogoWrapper>
-        <Image src={logo} width="200px" alt="Logo" />
+        <Image src={logo} width="160px" alt="Logo" />
       </LogoWrapper>
       <SideBarSection>
         <MenuList>
           {sideBar.map((item, idx) => (
-            <LiElement key={idx}>{item.name}</LiElement>
+            <LiElement key={idx}>
+              <div key={idx}>{ICONS_ORDER[idx].element}</div>
+              <SectionName>{item.name}</SectionName>
+            </LiElement>
           ))}
         </MenuList>
         <LogOutWrapper>
