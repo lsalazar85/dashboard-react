@@ -1,4 +1,5 @@
 import { HeaderWrapper, HeaderSide, Text } from './styles';
+import { getCurrentDate } from '../../utils';
 // import useExchangeRate from '../../hooks/useExchangeRate';
 // const { currentRate } = useExchangeRate('USD', 'MXN');
 
@@ -8,7 +9,7 @@ const Header = () => (
       <Text>1 USD = MXN</Text>
     </HeaderSide>
     <HeaderSide>
-      <Text>May 10, 2022</Text>
+      <Text>{getCurrentDate()}</Text>
     </HeaderSide>
   </HeaderWrapper>
 );
