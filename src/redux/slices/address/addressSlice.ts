@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AddressState } from '../../../interfaces';
 
-const initialState: AddressState = {
+const initialState: any = {
   addressName: '',
   latitude: 0,
   longitude: 0,
@@ -11,7 +10,7 @@ export const addressSlice = createSlice({
   name: 'address',
   initialState,
   reducers: {
-    setAddress: (state, action: PayloadAction<AddressState>) => ({
+    setAddress: (state, action: PayloadAction<any>) => ({
       ...state,
       ...action.payload,
     }),
