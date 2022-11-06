@@ -89,3 +89,13 @@ export const SideBarItem = styled.button<{active: boolean, disabled: boolean}>`
     }
   `}
 `;
+
+export const SideBarDesktop = styled.div`
+  @media(min-width: 200px){
+    display: none;
+  }
+
+  @media(min-width: 1000px){
+    display: block;
+  }
+`;

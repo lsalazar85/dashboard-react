@@ -17,6 +17,7 @@ import {
   SideBarItem,
   SectionName,
   IconWrapper,
+  SideBarDesktop,
 } from './styles';
 
 const SideBar = () => {
@@ -28,31 +29,35 @@ const SideBar = () => {
   const pathname = location.pathname.length > 1 ? location.pathname.slice(1) : location.pathname;
 
   return (
-    <SideBarWrapper>
-      <LogoWrapper>
-        <Image src={logo} width="200px" alt="Logo" />
-      </LogoWrapper>
-      <SideBarSection>
-        <MenuList>
-          {pages?.map((item, idx) => (
-            <LiElement key={idx}>
-              <SideBarItem
-                onClick={() => getAvailableRoute(item.page)}
-                active={pathname === item.page}
-                disabled={!Object.keys(item.content).length}
-                type="button"
-              >
-                <IconWrapper key={idx}>{ICONS_ORDER[idx]?.element}</IconWrapper>
-                <SectionName>{item.name}</SectionName>
-              </SideBarItem>
-            </LiElement>
-          ))}
-        </MenuList>
-        <LogOutWrapper>
-          <LogOutBtn type="button">Log out</LogOutBtn>
-        </LogOutWrapper>
-      </SideBarSection>
-    </SideBarWrapper>
+    <SideBarDesktop>
+      <SideBarWrapper>
+        <LogoWrapper>
+          <Image src={logo} width="200px" alt="Logo" />
+        </LogoWrapper>
+        <SideBarSection>
+          <MenuList>
+            {pages?.map((item, idx) => (
+              <LiElement key={idx}>
+                <SideBarItem
+                  onClick={() => getAvailableRoute(item.page)}
+                  active={pathname === item.page}
+                  disabled={!Object.keys(item.content).length}
+                  type="button"
+                >
+                  <IconWrapper key={idx}>
+                    {ICONS_ORDER[idx]?.element}
+                  </IconWrapper>
+                  <SectionName>{item.name}</SectionName>
+                </SideBarItem>
+              </LiElement>
+            ))}
+          </MenuList>
+          <LogOutWrapper>
+            <LogOutBtn type="button">Log out</LogOutBtn>
+          </LogOutWrapper>
+        </SideBarSection>
+      </SideBarWrapper>
+    </SideBarDesktop>
   );
 };
 

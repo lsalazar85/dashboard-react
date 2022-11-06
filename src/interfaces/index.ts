@@ -15,6 +15,12 @@ export interface IUseExchangeRate {
   error: Error | null;
 }
 
+
+export interface ITitle {
+  text: string;
+  fontSize: string;
+  fontWeight: string;
+}
 export interface ButtonProps {
   text: string;
   onClick: () => void;

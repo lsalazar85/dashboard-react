@@ -25,9 +25,9 @@ export const GlobalStyles = createGlobalStyle`
   body {
     height: 100vh;
     max-height: 100%;
-    margin: 0; 
+    margin: 0;
     padding: 0;
-    width: 100%; 
+    width: 100%;
     background: ${colors.White};
 
     @media(min-width: 200px){
