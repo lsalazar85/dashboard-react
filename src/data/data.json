@@ -7,7 +7,23 @@
       "page": "/",
       "name": "Dashboard",
       "content": {
-        "title": "Hi"
+        "title": "Hi",
+        "accountBalance" : {
+          "btn": "Cashout",
+          "accountTotal": "$4,250,000"
+        },
+        "makePaymentsAndInvoice": [
+          {"title": "Make New Payment"},
+          {"title": "Make New Invoice"}
+        ],
+        "receivables": {
+          "title": "Receivables",
+          "btn": "View All"
+        },
+        "payables": {
+          "title": "Payables",
+          "btn": "View All"
+        }
       }
     },
     {
@@ -75,11 +91,5 @@
       "id": 9,
       "type": "Actions"
     }
-  ],
-  "coins": {
-    "dollar": {
-      "MXN": 20.20,
-      "EUR": 0.938748
-    }
-  }
+  ]
 }
