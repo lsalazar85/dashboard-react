@@ -27,7 +27,7 @@ export const Notifications = styled.div`
   position: relative;
 
   &:after {
-    content: "1";
+    content: '1';
     background: ${colors.Red};
     width: 0.75rem;
     height: 0.75rem;
@@ -43,8 +43,28 @@ export const Notifications = styled.div`
     top: 0;
     right: -0.3rem;
   }
-  
+
   svg {
     color: ${colors.Blue};
+  }
+`;
+
+export const ExchangeRateDate = styled.div`
+  @media (min-width: 200px) {
+    display: none;
+  }
+
+  @media (min-width: 1000px) {
+    display: inline-block;
+  }
+`;
+
+export const HeaderMobileLogo = styled.div`
+  @media (min-width: 200px) {
+    display: inline-block;
+  }
+
+  @media (min-width: 1000px) {
+    display: none;
   }
 `;

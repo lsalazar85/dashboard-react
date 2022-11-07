@@ -1,7 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 
-import logo from '../../images/logo.svg';
-import { Image } from '../UI/Image';
+import { Logo } from '../UI/Icons/Logo';
 
 import { ICONS_ORDER } from '../../constants';
 import data from '../../data/data.json';
@@ -32,7 +31,7 @@ const SideBar = () => {
     <SideBarDesktop>
       <SideBarWrapper>
         <LogoWrapper>
-          <Image src={logo} width="200px" alt="Logo" />
+          <Logo />
         </LogoWrapper>
         <SideBarSection>
           <MenuList>
