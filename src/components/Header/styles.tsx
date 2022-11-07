@@ -10,11 +10,41 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const HeaderSide = styled.div`
-    display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Text = styled.span`
   font-weight: 500;
   font-size: 1rem;
   line-height: 19px;
+`;
+
+export const Notifications = styled.div`
+  margin-left: 1rem;
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    content: "1";
+    background: ${colors.Red};
+    width: 0.75rem;
+    height: 0.75rem;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid ${colors.White};
+    font-size: 0.625rem;
+    color: ${colors.White};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    top: 0;
+    right: -0.3rem;
+  }
+  
+  svg {
+    color: ${colors.Blue};
+  }
 `;

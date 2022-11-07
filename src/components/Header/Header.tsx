@@ -1,5 +1,11 @@
-import { HeaderWrapper, HeaderSide, Text } from './styles';
+import {
+  HeaderWrapper, HeaderSide, Text, Notifications,
+} from './styles';
+
+import { Bell } from '../UI/Icons/Bell';
+
 import { getCurrentDate } from '../../utils';
+
 // import useExchangeRate from '../../hooks/useExchangeRate';
 // const { currentRate } = useExchangeRate('USD', 'MXN');
 
@@ -10,6 +16,9 @@ const Header = () => (
     </HeaderSide>
     <HeaderSide>
       <Text>{getCurrentDate()}</Text>
+      <Notifications>
+        <Bell />
+      </Notifications>
     </HeaderSide>
   </HeaderWrapper>
 );
