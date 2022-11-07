@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 import colors from '../../styles/colors';
-
-import Title from '../../components/Title/Title';
+import { Title } from '../../components/UI/Title';
 
 export const DashboardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
   background: ${colors.Gray};
   padding: 1.563rem;
 `;
@@ -35,7 +33,7 @@ export const DashboardSide = styled.div`
   @media (min-width: 200px) {
     flex: 1 1 100%;
     &:first-child{
-      margin-top: 1rem;
+      margin: 1rem 0 1rem 0;
     }
   }
 
@@ -43,7 +41,13 @@ export const DashboardSide = styled.div`
     flex:  0 0 49%;
 
     &:first-child{
-      margin-top: 0;
+      margin: 0;
     }
   }
+`;
+
+export const Amount = styled.span`
+  color: ${colors.Blue};
+  font-weight: 700;
+  font-size: 2rem;
 `;

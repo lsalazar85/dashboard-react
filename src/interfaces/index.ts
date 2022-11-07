@@ -15,15 +15,21 @@ export interface IUseExchangeRate {
   error: Error | null;
 }
 
-
 export interface ITitle {
   text: string;
   fontSize: string;
   fontWeight: string;
 }
-export interface ButtonProps {
+export interface IButton {
+  fn?: () => void;
   text: string;
-  onClick: () => void;
+  disabled?: boolean;
+  secondary?: boolean;
+}
+
+export interface ICard {
+  children: JSX.Element | JSX.Element[];
+  border?: string;
 }
 
 export interface ModalProps {

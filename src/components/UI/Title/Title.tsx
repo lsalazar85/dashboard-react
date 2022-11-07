@@ -1,4 +1,4 @@
-import { ITitle } from '../../interfaces';
+import { ITitle } from '../../../interfaces';
 import { TitleWrapper, TitleSpan } from './styles';
 
 const Title = ({ fontWeight, fontSize, text }: ITitle) => (
