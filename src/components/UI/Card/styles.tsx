@@ -14,11 +14,17 @@ export const CardWrapper = styled.div<{borderColor?: string}>`
   }
 
   ${(props) => props.borderColor === 'orange' && css`
-    border-color: ${colors.Orange}
+    border-color: ${colors.Orange};
+    svg {
+      color: ${colors.Orange}
+    }
   `}
 
   ${(props) => props.borderColor === 'green' && css`
-    border-color: ${colors.Green}
+    border-color: ${colors.Green};
+    svg {
+      color: ${colors.Green}
+    }
   `}
 `;
 

@@ -1,8 +1,9 @@
 export interface ImageProps {
-  width: string;
+  width?: string;
   height?: string;
   src: string;
   alt: string;
+  svgColor?: string;
 }
 
 export interface ChildrenElement {
@@ -37,4 +38,9 @@ export interface ModalProps {
   show: boolean;
   onClose: () => void;
   content: JSX.Element | JSX.Element[];
+}
+
+export interface IIcon {
+  width?: string
+  height?: string
 }

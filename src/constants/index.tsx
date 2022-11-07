@@ -1,8 +1,8 @@
-import { DashBoard } from '../components/Icons/DashBoard';
-import { Clients } from '../components/Icons/Clients';
-import { NewInvoice } from '../components/Icons/NewInvoice';
-import { Money } from '../components/Icons/Money';
-import { Settings } from '../components/Icons/Settings';
+import { DashBoard } from '../components/UI/Icons/DashBoard';
+import { Clients } from '../components/UI/Icons/Clients';
+import { NewInvoice } from '../components/UI/Icons/NewInvoice';
+import { Money } from '../components/UI/Icons/Money';
+import { Settings } from '../components/UI/Icons/Settings';
 
 export const ICONS_ORDER = [
   { id: 1, element: <DashBoard /> },

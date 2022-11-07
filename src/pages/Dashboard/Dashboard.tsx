@@ -7,6 +7,11 @@ import {
   DashboardMainSection,
   DashboardSide,
   Amount,
+  MakeNewItem,
+  MakeNewItemIcon,
+  MakeNewItemWrapper,
+  NewInvoiceIcon,
+  NewPaymentIcon,
 } from './styles';
 
 import { CardTitleWrapper, CardTitle } from '../../components/UI/Card/styles';
@@ -24,10 +29,20 @@ const Dashboard = () => (
           <Amount>$4,250,000</Amount>
         </Card>
         <Card border="orange">
-          <span>Hello</span>
+          <MakeNewItemWrapper>
+            <MakeNewItemIcon>
+              <NewPaymentIcon />
+            </MakeNewItemIcon>
+            <MakeNewItem>Make New Payment</MakeNewItem>
+          </MakeNewItemWrapper>
         </Card>
         <Card border="green">
-          <span>Hello</span>
+          <MakeNewItemWrapper>
+            <MakeNewItemIcon>
+              <NewInvoiceIcon width="23" height="31" />
+            </MakeNewItemIcon>
+            <MakeNewItem>Make New Invoice</MakeNewItem>
+          </MakeNewItemWrapper>
         </Card>
       </DashboardSide>
       <DashboardSide>
