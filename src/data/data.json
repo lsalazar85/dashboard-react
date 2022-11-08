@@ -1,20 +1,17 @@
 {
-  "header": {
-    "logo": "logo"
-  },
   "pages": [
     {
       "page": "/",
       "name": "Dashboard",
       "content": {
         "title": "Hi",
-        "accountBalance" : {
+        "accountBalance": {
           "btn": "Cashout",
           "accountTotal": "$4,250,000"
         },
         "makePaymentsAndInvoice": [
-          {"title": "Make New Payment"},
-          {"title": "Make New Invoice"}
+          { "title": "Make New Payment" },
+          { "title": "Make New Invoice" }
         ],
         "receivables": {
           "title": "Receivables",

@@ -113,3 +113,27 @@ export const SwitchIconBox = styled.div`
     color: ${colors.Blue};
   }
 `;
+
+export const TotalRate = styled.div`
+  display: flex;
+  margin-top: 25px;
+`;
+
+export const TotalRateText = styled.span`
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: ${colors.Blue};
+`;
+
+export const RateConversion = styled.div`
+  display: flex;
+  margin-top: 17px;
+`;
+
+export const RateConversionText = styled.span`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: ${colors.Black};
+`;

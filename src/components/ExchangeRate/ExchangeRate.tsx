@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 
+import { exchangeRatesData } from '../../redux/store';
+
+import { TInputs } from '../../types';
 import { Arrows } from '../UI/Icons/Arrows';
 
 import {
@@ -15,20 +19,31 @@ import {
   SwitchTypeWrapper,
   SwitchIconWrapper,
   SwitchIconBox,
+  TotalRate,
+  TotalRateText,
+  RateConversion,
+  RateConversionText,
 } from './styles';
 
-type Inputs = {
-  amount: string;
-};
-
 const ExchangeRate = () => {
+  const exchangeRates = useSelector(exchangeRatesData);
   const [switchCoin, setSwitchCoin] = useState<boolean>(false);
-  const [firstCoin, setFirstCoin] = useState<string>('USD - Dólar Estadounidense');
-  const [secondCoin, setSecondCoin] = useState<string>('MXN - Mexican Pesos');
+  const [firstCoin, setFirstCoin] = useState<string>('');
+  const [secondCoin, setSecondCoin] = useState<string>('');
   const [balance, setBalance] = useState<number>(0);
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<TInputs>();
 
   const calculateRate = (amount: number) => setBalance(amount);
+
+  const dollarPerPesoRate = exchangeRates.USD.rates;
+  const pesoPerDollarRate = exchangeRates.MXN.rates;
+
+  const { MXN } = dollarPerPesoRate;
+  const { USD } = pesoPerDollarRate;
+
+  const switchRateType = !switchCoin ? 'USD' : 'MXN';
+  const switchFinalRateType = switchCoin ? 'USD' : 'MXN';
+  const totalBalanceRate = switchCoin ? USD * balance : MXN * balance;
 
   const handleSwitchCoin = () => {
     setSwitchCoin((prevState) => !prevState);
@@ -37,9 +52,9 @@ const ExchangeRate = () => {
   useEffect(() => {
     if (switchCoin) {
       setFirstCoin('MXN - Mexican Pesos');
-      setSecondCoin('USD - Dólar Estadounidense');
+      setSecondCoin('USD - US Dollars');
     } else {
-      setFirstCoin('USD - Dólar Estadounidense');
+      setFirstCoin('USD - US Dollars');
       setSecondCoin('MXN - Mexican Pesos');
     }
   }, [switchCoin]);
@@ -55,11 +70,13 @@ const ExchangeRate = () => {
             onChange: (e) => calculateRate(Number(e.target.value)),
           })}
         />
-        {!!balance && (
         <InputValueMessageWrapper>
-          <InputValueMessage>{balance}</InputValueMessage>
+          <InputValueMessage>
+            {!balance && 'Enter the amount to convert'}
+            {!!balance && !switchCoin && `${balance.toFixed(2)} US Dollars`}
+            {!!balance && switchCoin && `${balance.toFixed(2)} Mexican Pesos`}
+          </InputValueMessage>
         </InputValueMessageWrapper>
-        )}
       </ConvertSide>
       <CoinTypeWrapper>
         <SwitchTypeWrapper>
@@ -72,6 +89,16 @@ const ExchangeRate = () => {
           </SwitchIconBox>
         </SwitchIconWrapper>
       </CoinTypeWrapper>
+      <TotalRate>
+        <TotalRateText>
+          {`${balance.toFixed(2)} ${switchRateType} = ${totalBalanceRate} ${switchFinalRateType}`}
+        </TotalRateText>
+      </TotalRate>
+      <RateConversion>
+        <RateConversionText>
+          {`1 USD = ${MXN.toFixed(2)} MXN   |    1 MXN = ${USD} USD`}
+        </RateConversionText>
+      </RateConversion>
     </ExchangeRateWrapper>
   );
 };

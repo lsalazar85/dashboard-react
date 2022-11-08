@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import AddressReducer from './slices/address/addressSlice';
+import ExchangeRatesReducer from './slices/exchangeRates/exchangeRatesSlice';
 
 export const store = configureStore({
   reducer: {
-    value: AddressReducer,
+    value: ExchangeRatesReducer,
   },
 });
 
 type RootState = ReturnType<typeof store.getState>;
 
-export const addressData = (state: RootState) => state.value;
+export const exchangeRatesData = (state: RootState) => state.value;
 export type AppDispatch = typeof store.dispatch;
