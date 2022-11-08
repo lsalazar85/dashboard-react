@@ -84,7 +84,7 @@ const ExchangeRate = () => {
           <CoinType>{secondCoin}</CoinType>
         </SwitchTypeWrapper>
         <SwitchIconWrapper>
-          <SwitchIconBox rotate={switchCoin} onClick={() => handleSwitchCoin()}>
+          <SwitchIconBox rotate={switchCoin ? 1 : 0} onClick={() => handleSwitchCoin()}>
             <Arrows />
           </SwitchIconBox>
         </SwitchIconWrapper>

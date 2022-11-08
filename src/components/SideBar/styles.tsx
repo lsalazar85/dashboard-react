@@ -12,7 +12,7 @@ export const SideBarWrapper = styled.div`
   }
 
   @media(min-width: 1000px){
-    display: block;
+    display: inherit;
   }
 `;
 

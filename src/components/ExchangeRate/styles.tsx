@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import colors from '../../styles/colors';
 import { blink } from '../../styles/animations';
 
@@ -99,7 +99,7 @@ export const SwitchIconWrapper = styled.div`
   }
 `;
 
-export const SwitchIconBox = styled.div<{rotate?: boolean}>`
+export const SwitchIconBox = styled.div<{rotate?: number}>`
   border: 1px solid ${colors.Blue};
   background: ${colors.White};
   width: 2.688rem;
@@ -113,19 +113,8 @@ export const SwitchIconBox = styled.div<{rotate?: boolean}>`
   svg {
     color: ${colors.Blue};
     transition: 1s, transform 0.5s;
+    transform: ${(props) => (props.rotate && 'rotate(180deg)')};
   }
-
-  ${(props) => props.rotate && css`
-    svg {
-      transform: rotate(180deg);
-    }
-  `}
-
-  ${(props) => !props.rotate && css`
-    svg {
-      transform: rotate(0deg);
-    }
-  `}
 `;
 
 export const TotalRate = styled.div`
