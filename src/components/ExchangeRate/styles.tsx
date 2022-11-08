@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import colors from '../../styles/colors';
+import { blink } from '../../styles/animations';
 
 export const ExchangeRateWrapper = styled.form`
   display: flex;
@@ -98,7 +99,7 @@ export const SwitchIconWrapper = styled.div`
   }
 `;
 
-export const SwitchIconBox = styled.div`
+export const SwitchIconBox = styled.div<{rotate?: boolean}>`
   border: 1px solid ${colors.Blue};
   background: ${colors.White};
   width: 2.688rem;
@@ -111,7 +112,20 @@ export const SwitchIconBox = styled.div`
 
   svg {
     color: ${colors.Blue};
+    transition: 1s, transform 0.5s;
   }
+
+  ${(props) => props.rotate && css`
+    svg {
+      transform: rotate(180deg);
+    }
+  `}
+
+  ${(props) => !props.rotate && css`
+    svg {
+      transform: rotate(0deg);
+    }
+  `}
 `;
 
 export const TotalRate = styled.div`
@@ -124,6 +138,7 @@ export const TotalRateText = styled.span`
   font-size: 24px;
   line-height: 29px;
   color: ${colors.Blue};
+  animation: ${blink} 0.3s ease-in;
 `;
 
 export const RateConversion = styled.div`

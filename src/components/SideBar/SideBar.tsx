@@ -27,6 +27,11 @@ const SideBar = () => {
   const getAvailableRoute = (route: string) => (route === '/' ? navigate('/') : navigate(`/${route}`));
   const pathname = location.pathname.length > 1 ? location.pathname.slice(1) : location.pathname;
 
+  const setLogOut = () => {
+    window.localStorage.removeItem('name');
+    navigate('/login');
+  };
+
   return (
     <SideBarDesktop>
       <SideBarWrapper>
@@ -52,7 +57,7 @@ const SideBar = () => {
             ))}
           </MenuList>
           <LogOutWrapper>
-            <LogOutBtn type="button">Log out</LogOutBtn>
+            <LogOutBtn onClick={() => setLogOut()} type="button">Log out</LogOutBtn>
           </LogOutWrapper>
         </SideBarSection>
       </SideBarWrapper>

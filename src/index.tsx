@@ -6,7 +6,6 @@ import { store } from './redux/store';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 import App from './App';
-import { Layout } from './components/Layout';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -17,10 +16,8 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <Layout>
-          <GlobalStyles />
-          <App />
-        </Layout>
+        <GlobalStyles />
+        <App />
       </Router>
     </Provider>
   </React.StrictMode>,
