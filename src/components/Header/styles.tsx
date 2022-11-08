@@ -21,6 +21,16 @@ export const Text = styled.span`
   line-height: 19px;
 `;
 
+export const DateText = styled(Text)`
+  @media (min-width: 200px) {
+    display: none;
+  }
+
+  @media (min-width: 1000px) {
+    display: inline-block;
+  }
+`;
+
 export const Notifications = styled.div`
   margin-left: 1rem;
   cursor: pointer;

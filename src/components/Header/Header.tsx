@@ -8,6 +8,7 @@ import {
   Notifications,
   ExchangeRateDate,
   HeaderMobileLogo,
+  DateText,
 } from './styles';
 
 import { Bell } from '../UI/Icons/Bell';
@@ -32,7 +33,7 @@ const Header = () => {
         </ExchangeRateDate>
       </HeaderSide>
       <HeaderSide>
-        <Text>{getCurrentDate()}</Text>
+        <DateText>{getCurrentDate()}</DateText>
         <Notifications>
           <Bell />
         </Notifications>
