@@ -6,6 +6,14 @@ export const SideBarWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   flex: 0 0 16.875rem;
+
+  @media(min-width: 200px){
+    display: none;
+  }
+
+  @media(min-width: 1000px){
+    display: block;
+  }
 `;
 
 export const LogoWrapper = styled.div`
@@ -88,14 +96,4 @@ export const SideBarItem = styled.button<{active: boolean, disabled: boolean}>`
       }
     }
   `}
-`;
-
-export const SideBarDesktop = styled.div`
-  @media(min-width: 200px){
-    display: none;
-  }
-
-  @media(min-width: 1000px){
-    display: block;
-  }
 `;

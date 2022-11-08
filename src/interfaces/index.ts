@@ -40,7 +40,7 @@ export interface ModalProps {
   content: JSX.Element | JSX.Element[];
 }
 
-export interface ICurrentRate {
-  exchange: string;
-  rate: number
+export interface ISideMobileBar {
+  pageWrapId: string;
+  outerContainerId: string;
 }

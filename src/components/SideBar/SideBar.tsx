@@ -16,7 +16,6 @@ import {
   SideBarItem,
   SectionName,
   IconWrapper,
-  SideBarDesktop,
 } from './styles';
 
 const SideBar = () => {
@@ -33,35 +32,33 @@ const SideBar = () => {
   };
 
   return (
-    <SideBarDesktop>
-      <SideBarWrapper>
-        <LogoWrapper>
-          <Logo />
-        </LogoWrapper>
-        <SideBarSection>
-          <MenuList>
-            {pages?.map((item, idx) => (
-              <LiElement key={idx}>
-                <SideBarItem
-                  onClick={() => getAvailableRoute(item.page)}
-                  active={pathname === item.page}
-                  disabled={!Object.keys(item.content).length}
-                  type="button"
-                >
-                  <IconWrapper key={idx}>
-                    {ICONS_ORDER[idx]?.element}
-                  </IconWrapper>
-                  <SectionName>{item.name}</SectionName>
-                </SideBarItem>
-              </LiElement>
-            ))}
-          </MenuList>
-          <LogOutWrapper>
-            <LogOutBtn onClick={() => setLogOut()} type="button">Log out</LogOutBtn>
-          </LogOutWrapper>
-        </SideBarSection>
-      </SideBarWrapper>
-    </SideBarDesktop>
+    <SideBarWrapper>
+      <LogoWrapper>
+        <Logo />
+      </LogoWrapper>
+      <SideBarSection>
+        <MenuList>
+          {pages?.map((item, idx) => (
+            <LiElement key={idx}>
+              <SideBarItem
+                onClick={() => getAvailableRoute(item.page)}
+                active={pathname === item.page}
+                disabled={!Object.keys(item.content).length}
+                type="button"
+              >
+                <IconWrapper key={idx}>
+                  {ICONS_ORDER[idx]?.element}
+                </IconWrapper>
+                <SectionName>{item.name}</SectionName>
+              </SideBarItem>
+            </LiElement>
+          ))}
+        </MenuList>
+        <LogOutWrapper>
+          <LogOutBtn onClick={() => setLogOut()} type="button">Log out</LogOutBtn>
+        </LogOutWrapper>
+      </SideBarSection>
+    </SideBarWrapper>
   );
 };
 

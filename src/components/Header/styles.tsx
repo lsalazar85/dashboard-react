@@ -72,6 +72,10 @@ export const ExchangeRateDate = styled.div`
 export const HeaderMobileLogo = styled.div`
   @media (min-width: 200px) {
     display: inline-block;
+    
+    svg {
+      margin-left: 3rem;
+    }
   }
 
   @media (min-width: 1000px) {
