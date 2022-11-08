@@ -3,7 +3,7 @@ import colors from '../../../styles/colors';
 
 export const SideBarMobileWrapper = styled.div`
   .bm-menu-wrap {
-    position: absolute;
+    position: absolute !important;
     left: 0;
     top: 6rem;
   }
@@ -60,15 +60,13 @@ export const SideBarLink = styled.button<{active?: boolean, disabled?: boolean, 
 
   ${(props) => !props.active && css`
     font-weight: 500;
-    color: ${colors.Gray};
+    color: ${colors.Blue};
   `}
 
   ${(props) => props.disabled && css`
-    svg {
-      color: ${colors.Gray};
-    }
+    color: ${colors.Gray};
   `}
-
+  
   ${(props) => props.logout && css`
     color: ${colors.Black};
     font-weight: 700;
