@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import data from '../../data/data.json';
 
+import { ExchangeRate } from '../../components/ExchangeRate';
+
 import { Button } from '../../components/UI/Button';
 import { Card } from '../../components/UI/Card';
 
@@ -58,6 +60,7 @@ const Dashboard = () => {
             <CardTitleWrapper>
               <CardTitle>Exchange Rate</CardTitle>
             </CardTitleWrapper>
+            <ExchangeRate />
           </Card>
           <Card>
             <CardTitleWrapper>

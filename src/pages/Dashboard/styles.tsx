@@ -41,10 +41,10 @@ export const DashboardSide = styled.div`
   }
 
   @media (min-width: 1000px) {
-    flex: 0 0 49%;
+    width: 50%;
 
     &:first-child {
-      margin: 0;
+      margin: 0 1rem 0 0;
     }
   }
 `;

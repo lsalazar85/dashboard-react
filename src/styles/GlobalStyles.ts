@@ -44,4 +44,16 @@ export const GlobalStyles = createGlobalStyle`
     color: inherit;
     outline: 0;
   }
+  input {
+    outline: none;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
 `;
