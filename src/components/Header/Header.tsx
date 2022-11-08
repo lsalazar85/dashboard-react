@@ -1,4 +1,5 @@
-// import data from '../../data/data.json';
+import { useSelector } from 'react-redux';
+import { exchangeRatesData } from '../../redux/store';
 
 import {
   HeaderWrapper,
@@ -16,7 +17,9 @@ import { getCurrentDate } from '../../utils';
 import colors from '../../styles/colors';
 
 const Header = () => {
-  const dollarPerPesoRate = 22.20;
+  const exchangeRates = useSelector(exchangeRatesData);
+  const dollarPerPesoRate = exchangeRates.USD.rates;
+  const { MXN } = dollarPerPesoRate;
 
   return (
     <HeaderWrapper>
@@ -25,7 +28,7 @@ const Header = () => {
           <Logo width="130px" color={colors?.Blue} />
         </HeaderMobileLogo>
         <ExchangeRateDate>
-          <Text>{`1 USD = ${dollarPerPesoRate} MXN`}</Text>
+          <Text>{`1 USD = ${MXN.toFixed(2)} MXN`}</Text>
         </ExchangeRateDate>
       </HeaderSide>
       <HeaderSide>

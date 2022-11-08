@@ -73,8 +73,8 @@ const ExchangeRate = () => {
         <InputValueMessageWrapper>
           <InputValueMessage>
             {!balance && 'Enter the amount to convert'}
-            {!!balance && !switchCoin && `${balance} US Dollars`}
-            {!!balance && switchCoin && `${balance} Mexican Pesos`}
+            {!!balance && !switchCoin && `${balance.toFixed(2)} US Dollars`}
+            {!!balance && switchCoin && `${balance.toFixed(2)} Mexican Pesos`}
           </InputValueMessage>
         </InputValueMessageWrapper>
       </ConvertSide>
@@ -91,12 +91,12 @@ const ExchangeRate = () => {
       </CoinTypeWrapper>
       <TotalRate>
         <TotalRateText>
-          {`${balance} ${switchRateType} = ${totalBalanceRate} ${switchFinalRateType}`}
+          {`${balance.toFixed(2)} ${switchRateType} = ${totalBalanceRate} ${switchFinalRateType}`}
         </TotalRateText>
       </TotalRate>
       <RateConversion>
         <RateConversionText>
-          {`1 USD = ${MXN} MXN   |    1 MXN = ${USD} USD`}
+          {`1 USD = ${MXN.toFixed(2)} MXN   |    1 MXN = ${USD} USD`}
         </RateConversionText>
       </RateConversion>
     </ExchangeRateWrapper>
