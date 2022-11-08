@@ -88,12 +88,5 @@
       "id": 9,
       "type": "Actions"
     }
-  ],
-  "coins": {
-    "USD": [
-      { "exchange": "MXN", "rate": 20.22 },
-      { "exchange": "EUR", "rate": 0.938748 }
-    ],
-    "MXN": [{ "exchange": "USD", "rate": 0.0495 }]
-  }
+  ]
 }

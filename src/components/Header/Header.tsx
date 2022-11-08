@@ -1,4 +1,4 @@
-import data from '../../data/data.json';
+// import data from '../../data/data.json';
 
 import {
   HeaderWrapper,
@@ -16,7 +16,7 @@ import { getCurrentDate } from '../../utils';
 import colors from '../../styles/colors';
 
 const Header = () => {
-  const dollarPerPesoRate = data?.coins?.USD?.find((item) => item.exchange === 'MXN');
+  const dollarPerPesoRate = 22.20;
 
   return (
     <HeaderWrapper>
@@ -25,7 +25,7 @@ const Header = () => {
           <Logo width="130px" color={colors?.Blue} />
         </HeaderMobileLogo>
         <ExchangeRateDate>
-          <Text>{`1 USD = ${dollarPerPesoRate?.rate} MXN`}</Text>
+          <Text>{`1 USD = ${dollarPerPesoRate} MXN`}</Text>
         </ExchangeRateDate>
       </HeaderSide>
       <HeaderSide>
