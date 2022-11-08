@@ -7,7 +7,7 @@ export const CardWrapper = styled.div<{borderColor?: string}>`
   border: 1px solid ${colors.Gray200};
   background: ${colors.White};
   padding: 1.438rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   
   &:last-child {
     margin-bottom: 0;

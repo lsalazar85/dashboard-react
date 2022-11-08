@@ -40,7 +40,7 @@ export interface ModalProps {
   content: JSX.Element | JSX.Element[];
 }
 
-export interface IIcon {
-  width?: string
-  height?: string
+export interface ICurrentRate {
+  exchange: string;
+  rate: number
 }

@@ -44,7 +44,7 @@ export const DashboardSide = styled.div`
     width: 50%;
 
     &:first-child {
-      margin: 0 1rem 0 0;
+      margin: 0 1.5rem 0 0;
     }
   }
 `;
