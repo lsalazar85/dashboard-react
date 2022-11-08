@@ -1,0 +1,95 @@
+{
+  "header": {
+    "logo": "logo"
+  },
+  "pages": [
+    {
+      "page": "/",
+      "name": "Dashboard",
+      "content": {
+        "title": "Hi",
+        "accountBalance" : {
+          "btn": "Cashout",
+          "accountTotal": "$4,250,000"
+        },
+        "makePaymentsAndInvoice": [
+          {"title": "Make New Payment"},
+          {"title": "Make New Invoice"}
+        ],
+        "receivables": {
+          "title": "Receivables",
+          "btn": "View All"
+        },
+        "payables": {
+          "title": "Payables",
+          "btn": "View All"
+        }
+      }
+    },
+    {
+      "page": "newInvoice",
+      "name": "New Invoice",
+      "content": {}
+    },
+    {
+      "page": "receivables",
+      "name": "Receivables",
+      "content": {
+        "title": "Receivables"
+      }
+    },
+    {
+      "page": "payables",
+      "name": "Payables",
+      "content": {}
+    },
+    {
+      "page": "clients",
+      "name": "Clients",
+      "content": {}
+    },
+    {
+      "page": "settings",
+      "name": "Settings",
+      "content": {}
+    }
+  ],
+  "headerTable": [
+    {
+      "id": 1,
+      "type": "Client"
+    },
+    {
+      "id": 2,
+      "type": "Payment Status"
+    },
+    {
+      "id": 3,
+      "type": "Cargo Status"
+    },
+    {
+      "id": 4,
+      "type": "Date"
+    },
+    {
+      "id": 5,
+      "type": "Amount"
+    },
+    {
+      "id": 6,
+      "type": "Type of Payment"
+    },
+    {
+      "id": 7,
+      "type": "Installments Payed"
+    },
+    {
+      "id": 8,
+      "type": "Payments Due Date"
+    },
+    {
+      "id": 9,
+      "type": "Actions"
+    }
+  ]
+}

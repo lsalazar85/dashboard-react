@@ -1,41 +1,36 @@
-import { Location } from '../types';
-
 export interface ImageProps {
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
   src: string;
   alt: string;
+  svgColor?: string;
 }
 
 export interface ChildrenElement {
   children: JSX.Element | JSX.Element[];
 }
 
-export interface ButtonProps {
+export interface IUseExchangeRate {
+  currentRate: number;
+  loading: boolean;
+  error: Error | null;
+}
+
+export interface ITitle {
   text: string;
-  onClick: () => void;
+  fontSize: string;
+  fontWeight: string;
+}
+export interface IButton {
+  fn?: () => void;
+  text: string;
+  disabled?: boolean;
+  secondary?: boolean;
 }
 
-export interface CardElements {
-  id?: string;
-  name: string;
-  phone: number;
-  is_closed: boolean;
-  review_count: string,
-  distance: number,
-  rating: number;
-  image_url: string;
-  location: Location;
-}
-
-export interface CardProps {
-  details: CardElements
-}
-
-export interface AddressState {
-  addressName?: string;
-  latitude: number;
-  longitude: number;
+export interface ICard {
+  children: JSX.Element | JSX.Element[];
+  border?: string;
 }
 
 export interface ModalProps {
@@ -43,4 +38,9 @@ export interface ModalProps {
   show: boolean;
   onClose: () => void;
   content: JSX.Element | JSX.Element[];
+}
+
+export interface IIcon {
+  width?: string
+  height?: string
 }
