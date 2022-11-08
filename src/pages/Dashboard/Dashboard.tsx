@@ -79,7 +79,7 @@ const Dashboard = () => {
             <Card>
               <CardTitleWrapper>
                 <CardTitle>{`${dashboardData?.payables?.title}`}</CardTitle>
-                <Button fn={() => navigate('/receivables')} text={`${dashboardData?.payables?.btn}`} />
+                <Button text={`${dashboardData?.payables?.btn}`} />
               </CardTitleWrapper>
               <Amount>$4,250,000</Amount>
             </Card>

@@ -21,6 +21,16 @@ export const Text = styled.span`
   line-height: 19px;
 `;
 
+export const DateText = styled(Text)`
+  @media (min-width: 200px) {
+    display: none;
+  }
+
+  @media (min-width: 1000px) {
+    display: inline-block;
+  }
+`;
+
 export const Notifications = styled.div`
   margin-left: 1rem;
   cursor: pointer;
@@ -62,6 +72,10 @@ export const ExchangeRateDate = styled.div`
 export const HeaderMobileLogo = styled.div`
   @media (min-width: 200px) {
     display: inline-block;
+    
+    svg {
+      margin-left: 3rem;
+    }
   }
 
   @media (min-width: 1000px) {
