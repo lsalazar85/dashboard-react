@@ -20,6 +20,7 @@ export interface ITitle {
   text: string;
   fontSize: string;
   fontWeight: string;
+  color?: string;
 }
 export interface IButton {
   fn?: () => void;

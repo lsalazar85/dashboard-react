@@ -5,17 +5,20 @@ export const ButtonContainer = styled.button<{
   disabled?: boolean;
   secondary?: boolean;
 }>`
+  width: 162px;
+  justify-content: center;
+  text-align: center;
   display: flex;
   font-weight: 600;
-  padding: 0.625rem 1.9rem;
+  padding: 0.625rem 0;
   font-size: 0.75rem;
   cursor: pointer;
-  
+
   ${(props) => (props.secondary
     ? css`
+          display: flex;
           background: ${colors.Blue};
           color: ${colors.White};
-          cursor: no-drop;
         `
     : css`
           background: ${colors.White};
