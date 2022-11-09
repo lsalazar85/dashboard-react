@@ -21,6 +21,7 @@ import {
   MakeNewItemWrapper,
   NewInvoiceIcon,
   NewPaymentIcon,
+  ChartContent,
 } from './styles';
 
 import { CardTitleWrapper, CardTitle } from '../../components/UI/Card/styles';
@@ -70,7 +71,9 @@ const Dashboard = () => {
                 <Button fn={() => navigate('/receivables')} text={`${dashboardData?.receivables?.btn}`} />
               </CardTitleWrapper>
               <Amount>$4,250,000</Amount>
-              <Chart color={colors.Green} />
+              <ChartContent>
+                <Chart color={colors.Green} />
+              </ChartContent>
             </Card>
           </DashboardSide>
           <DashboardSide>
@@ -86,7 +89,9 @@ const Dashboard = () => {
                 <Button text={`${dashboardData?.payables?.btn}`} />
               </CardTitleWrapper>
               <Amount>$4,250,000</Amount>
-              <Chart color={colors.Orange} />
+              <ChartContent>
+                <Chart color={colors.Orange} />
+              </ChartContent>
             </Card>
           </DashboardSide>
         </DashboardMainSection>

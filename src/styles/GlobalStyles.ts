@@ -7,6 +7,9 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100%;
     
     @media(min-width: 200px){
       -ms-overflow-style: none;
@@ -23,11 +26,11 @@ export const GlobalStyles = createGlobalStyle`
   ul, li, h1, h2, h3, h4, h5, p, button { margin: 0; padding: 0; list-style-type: none; text-decoration: none }
   button { background: transparent; border: 0; outline: 0; cursor: pointer; }
   body {
+    width: 100vw;
     height: 100vh;
     max-height: 100%;
     margin: 0;
-    padding: 0;
-    width: 100%;
+    padding: 0;;
     background: ${colors.White};
 
     @media(min-width: 200px){

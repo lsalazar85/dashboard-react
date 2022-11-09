@@ -26,7 +26,7 @@ export const DateText = styled(Text)`
     display: none;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     display: inline-block;
   }
 `;
@@ -64,7 +64,7 @@ export const ExchangeRateDate = styled.div`
     display: none;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     display: inline-block;
   }
 `;
@@ -78,7 +78,7 @@ export const HeaderMobileLogo = styled.div`
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;

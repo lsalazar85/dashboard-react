@@ -2,17 +2,17 @@ import styled from 'styled-components';
 
 export const LayoutWrapper = styled.div`
   display: flex;
-  width: 100%;
   height: 100vh;
 `;
 
 export const LayoutContent = styled.div`
-  width: 100%;
-  height: 100vh;
+  @media(min-width: 1024px){
+    overflow-y: scroll;
+  }
 `;
 
 export const LayoutSide = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100%
 `;
