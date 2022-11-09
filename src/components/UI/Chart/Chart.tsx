@@ -47,7 +47,7 @@ const Chart = ({ color }: IChart) => {
 
   return (
     <Bar
-      style={{ marginTop: '2rem' }}
+      style={{ marginTop: '2rem', maxHeight: '400px' }}
       options={options}
       data={data}
     />
