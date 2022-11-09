@@ -24,7 +24,7 @@ export const LoginForm = styled.form`
     width: 80%;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     width: 400px;
   }
 `;

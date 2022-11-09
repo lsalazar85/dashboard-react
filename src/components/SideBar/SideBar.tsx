@@ -54,10 +54,10 @@ const SideBar = () => {
             </LiElement>
           ))}
         </MenuList>
-        <LogOutWrapper>
-          <LogOutBtn onClick={() => setLogOut()} type="button">Log out</LogOutBtn>
-        </LogOutWrapper>
       </SideBarSection>
+      <LogOutWrapper>
+        <LogOutBtn onClick={() => setLogOut()} type="button">Log out</LogOutBtn>
+      </LogOutWrapper>
     </SideBarWrapper>
   );
 };

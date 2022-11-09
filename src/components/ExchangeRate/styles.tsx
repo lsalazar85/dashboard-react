@@ -12,10 +12,6 @@ export const ConvertSide = styled.div`
   flex-direction: column;
   margin-top: 1.438rem;
   width: 80%;
-
-  @media (min-width: 1000px) {
-    max-width: 24.688rem;
-  }
 `;
 
 export const ExchangeRateTitle = styled.span`
@@ -67,7 +63,7 @@ export const CoinType = styled.div`
     font-size: 0.8rem;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     font-size: 1rem;
   }
 `;
@@ -79,10 +75,6 @@ export const SwitchTypeWrapper = styled.div`
   @media (min-width: 200px) {
     width: 80%;
   }
-
-  @media (min-width: 1000px) {
-    width: 24.688rem;
-  }
 `;
 
 export const SwitchIconWrapper = styled.div`
@@ -92,10 +84,6 @@ export const SwitchIconWrapper = styled.div`
 
   @media (min-width: 200px) {
     width: 20%;
-  }
-
-  @media (min-width: 1000px) {
-    width: 6.25rem;
   }
 `;
 

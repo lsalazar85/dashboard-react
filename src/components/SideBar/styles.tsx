@@ -2,17 +2,15 @@ import styled, { css } from 'styled-components';
 import colors from '../../styles/colors';
 
 export const SideBarWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 0 0 16.875rem;
-
   @media(min-width: 200px){
     display: none;
   }
 
   @media(min-width: 1000px){
-    display: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 16.875rem;
   }
 `;
 

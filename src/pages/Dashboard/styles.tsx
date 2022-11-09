@@ -25,7 +25,7 @@ export const DashboardMainSection = styled.section`
     margin-top: 2rem;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2.313rem;
@@ -34,13 +34,14 @@ export const DashboardMainSection = styled.section`
 
 export const DashboardSide = styled.div`
   @media (min-width: 200px) {
-    flex: 1 1 100%;
+    width: 100%;
+    
     &:first-child {
       margin: 1rem 0 1rem 0;
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     width: 50%;
 
     &:first-child {
@@ -57,7 +58,7 @@ export const Amount = styled.span`
     font-size: 1.6rem;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     font-size: 2rem;
   }
 `;
@@ -77,7 +78,7 @@ export const MakeNewItem = styled.span`
     font-size: 1.1rem;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     font-size: 1.375rem;
   }
 `;
@@ -96,3 +97,7 @@ export const MakeNewItemIcon = styled.div`
 export const NewInvoiceIcon = styled(NewInvoice)``;
 
 export const NewPaymentIcon = styled(Payment)``;
+
+export const ChartContent = styled.div`
+    width: 100%;
+`;
