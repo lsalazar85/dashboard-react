@@ -44,3 +44,7 @@ export interface ISideMobileBar {
   pageWrapId: string;
   outerContainerId: string;
 }
+
+export interface IChart {
+  color?: string;
+}

@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import data from '../../data/data.json';
 
 import { Layout } from '../../components/Layout';
 import { ExchangeRate } from '../../components/ExchangeRate';
 import { Button } from '../../components/UI/Button';
 import { Card } from '../../components/UI/Card';
+import { Chart } from '../../components/UI/Chart';
+
+import data from '../../data/data.json';
+import colors from '../../styles/colors';
 
 import {
   DashboardWrapper,
@@ -67,6 +70,7 @@ const Dashboard = () => {
                 <Button fn={() => navigate('/receivables')} text={`${dashboardData?.receivables?.btn}`} />
               </CardTitleWrapper>
               <Amount>$4,250,000</Amount>
+              <Chart color={colors.Orange} />
             </Card>
           </DashboardSide>
           <DashboardSide>
@@ -82,6 +86,7 @@ const Dashboard = () => {
                 <Button text={`${dashboardData?.payables?.btn}`} />
               </CardTitleWrapper>
               <Amount>$4,250,000</Amount>
+              <Chart color={colors.Green} />
             </Card>
           </DashboardSide>
         </DashboardMainSection>
