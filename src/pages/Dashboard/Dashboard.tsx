@@ -70,7 +70,7 @@ const Dashboard = () => {
                 <Button fn={() => navigate('/receivables')} text={`${dashboardData?.receivables?.btn}`} />
               </CardTitleWrapper>
               <Amount>$4,250,000</Amount>
-              <Chart color={colors.Orange} />
+              <Chart color={colors.Green} />
             </Card>
           </DashboardSide>
           <DashboardSide>
@@ -86,7 +86,7 @@ const Dashboard = () => {
                 <Button text={`${dashboardData?.payables?.btn}`} />
               </CardTitleWrapper>
               <Amount>$4,250,000</Amount>
-              <Chart color={colors.Green} />
+              <Chart color={colors.Orange} />
             </Card>
           </DashboardSide>
         </DashboardMainSection>
