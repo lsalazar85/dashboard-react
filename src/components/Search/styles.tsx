@@ -3,16 +3,16 @@ import colors from '../../styles/colors';
 
 export const SearchContainer = styled.form`
   display: flex;
-  margin: 1.563rem 0;
+  padding: 0 1.563rem ;
 
   @media(min-width: 200px){
     width: 90%;
-    margin: 1.563rem auto ;
+    margin: 0 auto ;
   }
   
   @media(min-width: 1024px){
     width: 22.5rem;
-    margin: 1.563rem 0;
+    margin: 0 0;
   }
 `;
 

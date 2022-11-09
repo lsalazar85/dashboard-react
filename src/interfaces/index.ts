@@ -1,4 +1,4 @@
-import {ChangeEventHandler} from 'react';
+import { ChangeEventHandler } from 'react';
 
 export interface ImageProps {
   width?: string;
@@ -53,5 +53,26 @@ export interface IChart {
 }
 
 export interface ISearch {
-  onChange: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>
+  onChange: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+}
+
+interface ITableHeaders {
+  id: number;
+  type: string;
+}
+
+interface ITableItems {
+  client: string;
+  paymentStatus: string;
+  cargoStatus: string;
+  date: string;
+  amount: number;
+  typePayment: string;
+  installmentsPayed: string;
+  paymentDueDate: string;
+}
+
+export interface ITable {
+  headers: ITableHeaders[];
+  tableItems: ITableItems[];
 }

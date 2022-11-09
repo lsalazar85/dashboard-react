@@ -23,10 +23,9 @@ import { SideBarMobile } from '../SideBar/SideBarMobile';
 const Header = () => {
   const location = useLocation();
   const exchangeRates = useSelector(exchangeRatesData);
-  const dollarPerPesoRate = exchangeRates.USD.rates;
 
   const { pathname } = location;
-  const { MXN, EUR } = dollarPerPesoRate;
+  const { MXN, EUR } = exchangeRates.USD.rates;
 
   return (
     <HeaderWrapper>
@@ -37,7 +36,7 @@ const Header = () => {
         </HeaderMobileLogo>
         <ExchangeRateDate>
           <Text>
-            {pathname !== 'receivables'
+            {pathname.slice(1) !== 'receivables'
               ? `1 USD = ${MXN.toFixed(2)} MXN`
               : `1 USD = ${EUR} EUR`}
           </Text>
