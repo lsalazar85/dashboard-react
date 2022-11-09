@@ -12,7 +12,7 @@ export const SideBarMobileWrapper = styled.div`
     position: relative;
     width: 1.813rem;
     height: 1.375rem;
-    top: 2rem;
+    top: 1rem;
   }
 
   .bm-burger-bars {
@@ -41,7 +41,7 @@ export const SideBarMobileWrapper = styled.div`
   }
 
   .bm-overlay {
-    background: transparent !important;
+    display: none;
   }
 `;
 

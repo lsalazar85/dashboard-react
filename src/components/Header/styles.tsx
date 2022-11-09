@@ -74,7 +74,7 @@ export const HeaderMobileLogo = styled.div`
     display: inline-block;
     
     svg {
-      margin-left: 3rem;
+      margin: -1rem 0 0 3rem;
     }
   }
 
