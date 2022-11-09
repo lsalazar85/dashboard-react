@@ -1,3 +1,5 @@
+import {ChangeEventHandler} from 'react';
+
 export interface ImageProps {
   width?: string;
   height?: string;
@@ -48,4 +50,8 @@ export interface ISideMobileBar {
 
 export interface IChart {
   color?: string;
+}
+
+export interface ISearch {
+  onChange: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>
 }

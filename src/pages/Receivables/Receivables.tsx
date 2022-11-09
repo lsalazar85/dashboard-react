@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Layout } from '../../components/Layout';
 import { Title } from '../../components/UI/Title';
 import { Modal } from '../../components/UI/Modal';
+import { Search } from '../../components/Search';
 
 import { ReceivablesWrapper, ReceivablesHeader, NewInvoiceButton } from './styles';
 import colors from '../../styles/colors';
@@ -22,6 +23,7 @@ const Receivables = () => {
           />
           <NewInvoiceButton fn={() => setShowModal(true)} text="+ New invoice" secondary />
         </ReceivablesHeader>
+        <Search onChange={(e) => console.log(e.target.value)} />
       </ReceivablesWrapper>
       <Modal
         visible={showModal}

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { Button } from '../../components/UI/Button';
 
 export const ReceivablesWrapper = styled.div`
