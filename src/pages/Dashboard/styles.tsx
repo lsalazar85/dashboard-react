@@ -11,6 +11,10 @@ export const DashboardWrapper = styled.div`
   width: 100%;
   background: ${colors.Gray};
   padding: 1.563rem;
+  
+  @media(min-height: 900px){
+    height: 92vh;
+  }
 `;
 
 export const DashboardTitle = styled(Title)``;

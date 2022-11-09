@@ -6,8 +6,20 @@ export const LayoutWrapper = styled.div`
 `;
 
 export const LayoutContent = styled.div`
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
   @media(min-width: 1024px){
     overflow-y: scroll;
+    height: 100%;
+  }
+  
+  @media(min-height: 700px){
+    height: 100vh;
   }
 `;
 
