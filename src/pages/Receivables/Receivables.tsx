@@ -1,13 +1,14 @@
 import { useState } from 'react';
+
 import { Layout } from '../../components/Layout';
 import { Title } from '../../components/UI/Title';
+import { Modal } from '../../components/UI/Modal';
 
 import { ReceivablesWrapper, ReceivablesHeader, NewInvoiceButton } from './styles';
 import colors from '../../styles/colors';
 
 const Receivables = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
-  console.log(showModal);
 
   return (
     <Layout>
@@ -22,6 +23,14 @@ const Receivables = () => {
           <NewInvoiceButton fn={() => setShowModal(true)} text="+ New invoice" secondary />
         </ReceivablesHeader>
       </ReceivablesWrapper>
+      <Modal
+        visible={showModal}
+        title="Add New Invoice"
+        onClose={() => setShowModal((prevState) => !prevState)}
+        hideCloseIcon
+      >
+        <span>Hello</span>
+      </Modal>
     </Layout>
   );
 };
