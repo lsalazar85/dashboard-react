@@ -56,7 +56,7 @@ const Table = ({ headers, tableItems }: ITable) => (
           </TableContentItemText>
         </TableContentItem>
         <TableContentItem>
-          <TableContentItemText>Authorize Credit</TableContentItemText>
+          <TableContentItemText authorize>Authorize Credit</TableContentItemText>
         </TableContentItem>
       </TableContent>
     ))}
