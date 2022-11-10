@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 
 import { Button } from '../../components/UI/Button';
+import { ExchangeRateTitle } from '../../components/ExchangeRate/styles';
 
 export const ReceivablesWrapper = styled.div`
   display: flex;
@@ -18,3 +19,11 @@ export const ReceivablesHeader = styled.div`
 `;
 
 export const NewInvoiceButton = styled(Button)``;
+
+export const AddNewInvoiceSubmit = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const AddNewInvoiceItemName = styled(ExchangeRateTitle)``;

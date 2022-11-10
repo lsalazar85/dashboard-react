@@ -1,6 +1,20 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-const initialState = {
+interface IExchangeRatesState {
+  USD: {
+    rates: {
+      MXN: number,
+      EUR: number,
+    }
+  },
+  MXN: {
+    rates: {
+      USD: number,
+    }
+  }
+}
+
+const initialState: IExchangeRatesState = {
   USD: {
     rates: {
       MXN: 20.20,

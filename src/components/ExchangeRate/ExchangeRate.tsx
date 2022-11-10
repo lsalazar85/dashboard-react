@@ -35,11 +35,8 @@ const ExchangeRate = () => {
 
   const calculateRate = (amount: number) => setBalance(amount);
 
-  const dollarPerPesoRate = exchangeRates.USD.rates;
-  const pesoPerDollarRate = exchangeRates.MXN.rates;
-
-  const { MXN } = dollarPerPesoRate;
-  const { USD } = pesoPerDollarRate;
+  const { MXN } = exchangeRates.USD.rates;
+  const { USD } = exchangeRates.MXN.rates;
 
   const switchRateType = !switchCoin ? 'USD' : 'MXN';
   const switchFinalRateType = switchCoin ? 'USD' : 'MXN';

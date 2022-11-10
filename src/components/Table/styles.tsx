@@ -45,22 +45,22 @@ export const TableContentItemText = styled.span<{ state?: string }>`
   font-size: 0.75rem;
   text-transform: capitalize;
 
-  ${(props) => props.state === 'completed' && css`
+  ${(props) => props.state?.toLowerCase() === 'completed' && css`
     ${stateStyle};
     background: ${colors.Green};
   `}
 
-  ${(props) => props.state === 'delivered' && css`
+  ${(props) => props.state?.toLowerCase() === 'delivered' && css`
     ${stateStyle};
     background: ${colors.Blue};
   `}
 
-  ${(props) => props.state === 'processing' && css`
+  ${(props) => props.state?.toLowerCase() === 'processing' && css`
     ${stateStyle};
     background: ${colors.Orange};
   `}
 
-  ${(props) => props.state === 'missing' && css`
+  ${(props) => props.state?.toLowerCase() === 'missing' && css`
     ${stateStyle};
     background: ${colors.Red};
   `}

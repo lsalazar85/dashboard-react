@@ -61,13 +61,13 @@ interface ITableHeaders {
   type: string;
 }
 
-interface ITableItems {
+export interface ITableItems {
   client: string;
   paymentStatus: string;
   cargoStatus: string;
   date: string;
   amount: number;
-  typePayment: string;
+  typeOfPayment: string;
   installmentsPayed: string;
   paymentDueDate: string;
 }

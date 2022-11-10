@@ -19,8 +19,8 @@ const Table = ({ headers, tableItems }: ITable) => (
         </TableOrder>
       ))}
     </TableHeader>
-    {tableItems.map((item) => (
-      <TableContent>
+    {tableItems.map((item, idx) => (
+      <TableContent key={idx}>
         <TableContentItem>
           <TableContentItemText>{item.client}</TableContentItemText>
         </TableContentItem>
@@ -41,7 +41,7 @@ const Table = ({ headers, tableItems }: ITable) => (
           <TableContentItemText>{item.amount}</TableContentItemText>
         </TableContentItem>
         <TableContentItem>
-          <TableContentItemText>{item.typePayment}</TableContentItemText>
+          <TableContentItemText>{item.typeOfPayment}</TableContentItemText>
         </TableContentItem>
         <TableContentItem>
           <TableContentItemText>{item.installmentsPayed}</TableContentItemText>
