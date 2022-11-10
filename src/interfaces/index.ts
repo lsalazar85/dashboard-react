@@ -1,3 +1,5 @@
+import { ChangeEventHandler } from 'react';
+
 export interface ImageProps {
   width?: string;
   height?: string;
@@ -20,6 +22,7 @@ export interface ITitle {
   text: string;
   fontSize: string;
   fontWeight: string;
+  color?: string;
 }
 export interface IButton {
   fn?: () => void;
@@ -47,4 +50,29 @@ export interface ISideMobileBar {
 
 export interface IChart {
   color?: string;
+}
+
+export interface ISearch {
+  onChange: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+}
+
+interface ITableHeaders {
+  id: number;
+  type: string;
+}
+
+export interface ITableItems {
+  client: string;
+  paymentStatus: string;
+  cargoStatus: string;
+  date: string;
+  amount: number;
+  typeOfPayment: string;
+  installmentsPayed: string;
+  paymentDueDate: string;
+}
+
+export interface ITable {
+  headers: ITableHeaders[];
+  tableItems: ITableItems[];
 }

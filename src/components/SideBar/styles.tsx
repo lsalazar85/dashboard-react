@@ -2,11 +2,13 @@ import styled, { css } from 'styled-components';
 import colors from '../../styles/colors';
 
 export const SideBarWrapper = styled.div`
+  border-right: 1px solid ${colors.Gray200};
+  
   @media(min-width: 200px){
     display: none;
   }
 
-  @media(min-width: 1000px){
+  @media(min-width: 1024px){
     display: flex;
     flex-direction: column;
     justify-content: space-between;

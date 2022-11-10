@@ -9,8 +9,12 @@ export const DashboardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: ${colors.Gray};
+  background: ${colors.LightGray};
   padding: 1.563rem;
+  
+  @media(min-height: 900px){
+    height: 92vh;
+  }
 `;
 
 export const DashboardTitle = styled(Title)``;
