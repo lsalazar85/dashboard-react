@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Layout } from '../../components/Layout';
@@ -21,12 +21,14 @@ import {
 import colors from '../../styles/colors';
 
 import data from '../../data/data.json';
+import { ITableItems } from '../../interfaces';
 
 const Receivables = () => {
-  const [searchValue, setSearchValue] = useState<string>('');
+  const { items: tableItemsValues } = useSelector(tableStateData);
+
+  const [allItems, setAllItems] = useState<ITableItems[]>([]);
 
   const dispatch = useDispatch();
-  const { items } = useSelector(tableStateData);
 
   const headers = data.headerTable;
 
@@ -38,7 +40,21 @@ const Receivables = () => {
     );
   };
 
-  console.log(searchValue);
+  const handleSearchFilter = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const result = tableItemsValues.filter(
+      (element) => element.client.includes(e.target.value)
+        || element.paymentStatus.includes(e.target.value)
+        || element.cargoStatus.includes(e.target.value)
+        || element.date.includes(e.target.value)
+        || element.typeOfPayment.includes(e.target.value)
+        || element.installmentsPayed.includes(e.target.value)
+        || element.installmentsPayed.includes(e.target.value),
+    );
+
+    setAllItems(result);
+  };
 
   return (
     <Layout>
@@ -56,8 +72,8 @@ const Receivables = () => {
             secondary
           />
         </ReceivablesHeader>
-        <Search onChange={(e) => setSearchValue(e.target.value)} />
-        <Table headers={headers} tableItems={items} />
+        <Search onChange={(e) => handleSearchFilter(e)} />
+        <Table headers={headers} tableItems={allItems.length ? allItems : tableItemsValues} />
       </ReceivablesWrapper>
       <ModalAddInvoice />
     </Layout>
