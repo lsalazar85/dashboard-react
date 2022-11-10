@@ -5,7 +5,7 @@ export const ButtonContainer = styled.button<{
   disabled?: boolean;
   secondary?: boolean;
 }>`
-  width: 162px;
+  width: 8rem;
   justify-content: center;
   text-align: center;
   display: flex;
