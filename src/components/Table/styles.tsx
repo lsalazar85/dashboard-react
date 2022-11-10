@@ -41,7 +41,7 @@ export const TableContentItem = styled.div`
   padding: 1rem 0;
 `;
 
-export const TableContentItemText = styled.span<{ state?: string, date?: number }>`
+export const TableContentItemText = styled.span<{ state?: string, authorize?: boolean }>`
   font-size: 0.75rem;
   text-transform: capitalize;
 
@@ -50,19 +50,32 @@ export const TableContentItemText = styled.span<{ state?: string, date?: number 
     background: ${colors.Green};
   `}
 
-  ${(props) => props.state?.toLowerCase() === 'delivered' && css`
+  ${(props) => props.state === 'delivered' && css`
     ${stateStyle};
     background: ${colors.Blue};
   `}
 
-  ${(props) => props.state?.toLowerCase() === 'processing' && css`
+  ${(props) => props.state === 'processing' && css`
     ${stateStyle};
     background: ${colors.Orange};
   `}
 
-  ${(props) => props.state?.toLowerCase() === 'missing' && css`
+  ${(props) => props.state === 'missing' && css`
     ${stateStyle};
     background: ${colors.Red};
+  `}
+
+  ${(props) => props.state === 'missing' && css`
+    ${stateStyle};
+    background: ${colors.Red};
+  `}
+
+  ${(props) => props.authorize && css`
+    color: ${colors.Blue};
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: ${colors.Blue};
+    cursor: pointer;
   `}
 `;
 
