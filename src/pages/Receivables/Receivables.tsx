@@ -33,6 +33,8 @@ const Receivables = () => {
   const headers = data.headerTable;
 
   const setNewInvoice = () => {
+    setAllItems([]);
+
     dispatch(
       setModalState({
         showModal: true,
@@ -43,7 +45,9 @@ const Receivables = () => {
   const handleSearchFilter = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    const result = tableItemsValues.filter(
+    e.preventDefault();
+
+    const resultFilter = tableItemsValues.filter(
       (element) => element.client.includes(e.target.value)
         || element.paymentStatus.includes(e.target.value)
         || element.cargoStatus.includes(e.target.value)
@@ -53,7 +57,7 @@ const Receivables = () => {
         || element.installmentsPayed.includes(e.target.value),
     );
 
-    setAllItems(result);
+    setAllItems(resultFilter);
   };
 
   return (
@@ -73,7 +77,7 @@ const Receivables = () => {
           />
         </ReceivablesHeader>
         <Search onChange={(e) => handleSearchFilter(e)} />
-        <Table headers={headers} tableItems={allItems.length ? allItems : tableItemsValues} />
+        <Table headers={headers} tableItems={Object.keys(allItems).length ? allItems : tableItemsValues} />
       </ReceivablesWrapper>
       <ModalAddInvoice />
     </Layout>
