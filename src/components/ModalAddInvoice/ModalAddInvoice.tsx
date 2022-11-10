@@ -11,6 +11,7 @@ import {
 import { Input } from '../ExchangeRate/styles';
 import { Button } from '../UI/Button';
 import { Modal } from '../UI/Modal';
+import { Select } from '../../styles/generalStyles';
 
 import { TModalInvoices } from '../../types';
 
@@ -78,19 +79,21 @@ const ModalAddInvoice = () => {
         </AddNewInvoiceItem>
         <AddNewInvoiceItem>
           <AddNewInvoiceItemName>Payment Status</AddNewInvoiceItemName>
-          <Input
-            type="text"
-            placeholder="Delivered, Completed, Processing, Missing"
-            {...register('paymentStatus', { required: true })}
-          />
+          <Select {...register('paymentStatus', { required: true })}>
+            <option value="delivered">Delivered</option>
+            <option value="completed">Completed</option>
+            <option value="processing">Processing</option>
+            <option value="missing">Missing</option>
+          </Select>
         </AddNewInvoiceItem>
         <AddNewInvoiceItem>
           <AddNewInvoiceItemName>Cargo Status</AddNewInvoiceItemName>
-          <Input
-            type="text"
-            placeholder="Delivered, Completed, Processing, Missing"
-            {...register('cargoStatus', { required: true })}
-          />
+          <Select {...register('cargoStatus', { required: true })}>
+            <option value="delivered">Delivered</option>
+            <option value="completed">Completed</option>
+            <option value="processing">Processing</option>
+            <option value="missing">Missing</option>
+          </Select>
         </AddNewInvoiceItem>
         <AddNewInvoiceItem>
           <AddNewInvoiceItemName>Date</AddNewInvoiceItemName>
