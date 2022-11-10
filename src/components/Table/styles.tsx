@@ -50,25 +50,21 @@ export const TableContentItemText = styled.span<{ state?: string, authorize?: bo
     background: ${colors.Green};
   `}
 
-  ${(props) => props.state === 'delivered' && css`
+  ${(props) => props.state?.toLowerCase() === 'delivered' && css`
     ${stateStyle};
     background: ${colors.Blue};
   `}
 
-  ${(props) => props.state === 'processing' && css`
+  ${(props) => props.state?.toLowerCase() === 'processing' && css`
     ${stateStyle};
     background: ${colors.Orange};
   `}
 
-  ${(props) => props.state === 'missing' && css`
+  ${(props) => props.state?.toLowerCase() === 'missing' && css`
     ${stateStyle};
     background: ${colors.Red};
   `}
-
-  ${(props) => props.state === 'missing' && css`
-    ${stateStyle};
-    background: ${colors.Red};
-  `}
+  
 
   ${(props) => props.authorize && css`
     color: ${colors.Blue};
