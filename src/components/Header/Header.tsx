@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+
 import { exchangeRatesData } from '../../redux/store';
 
 import {
@@ -43,7 +44,7 @@ const Header = () => {
         </ExchangeRateDate>
       </HeaderSide>
       <HeaderSide>
-        <DateText>{getCurrentDate()}</DateText>
+        <DateText>{getCurrentDate('MMM dd, yyyy')}</DateText>
         <Notifications>
           <Bell />
         </Notifications>

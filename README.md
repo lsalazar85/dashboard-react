@@ -12,11 +12,11 @@ but the requests are limited, so I decided not to implement it in order not to b
 
 ## Future Improvements
 - Develop and implement custom charts.
-- Add and improve unit tests on all components.
-- Implement the Search component in the restaurants list.
+- Add unit tests with React Testing Library.
 - Make a possible unification of the styles of the SideBar 
 component in both its desktop and mobile.
 - Add an API with more available requests to implement the useExchangeRate hook.
+- Improve search function and details.
 
 ## Deployment app
 
@@ -49,7 +49,6 @@ Starts on `http://localhost:3000`
 - Typescript
 - React Router V6
 - Redux Toolkit
-- Jest & React testing library
 - Styled components 
 - Chart.js
 - Framer Motion

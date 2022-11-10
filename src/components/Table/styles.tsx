@@ -41,7 +41,7 @@ export const TableContentItem = styled.div`
   padding: 1rem 0;
 `;
 
-export const TableContentItemText = styled.span<{ state?: string }>`
+export const TableContentItemText = styled.span<{ state?: string, date?: number }>`
   font-size: 0.75rem;
   text-transform: capitalize;
 
