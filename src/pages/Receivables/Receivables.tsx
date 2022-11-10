@@ -47,14 +47,16 @@ const Receivables = () => {
   ) => {
     e.preventDefault();
 
+    const searchValue = e.target.value;
+
     const resultFilter = tableItemsValues.filter(
-      (element) => element.client.includes(e.target.value)
-        || element.paymentStatus.includes(e.target.value)
-        || element.cargoStatus.includes(e.target.value)
-        || element.date.includes(e.target.value)
-        || element.typeOfPayment.includes(e.target.value)
-        || element.installmentsPayed.includes(e.target.value)
-        || element.installmentsPayed.includes(e.target.value),
+      (element) => element.client.includes(searchValue)
+        || element.paymentStatus.includes(searchValue)
+        || element.cargoStatus.includes(searchValue)
+        || element.date.includes(searchValue)
+        || element.typeOfPayment.includes(searchValue)
+        || element.installmentsPayed.includes(searchValue)
+        || element.installmentsPayed.includes(searchValue),
     );
 
     setAllItems(resultFilter);

@@ -1,5 +1,7 @@
 import { ITable } from '../../interfaces';
 
+import { setFormatDate } from '../../utils';
+
 import {
   TableWrapper,
   TableContent,
@@ -35,7 +37,9 @@ const Table = ({ headers, tableItems }: ITable) => (
           </TableContentItemText>
         </TableContentItem>
         <TableContentItem>
-          <TableContentItemText>{item.date}</TableContentItemText>
+          <TableContentItemText>
+            {setFormatDate('dd/MM/yyyy', item.date)}
+          </TableContentItemText>
         </TableContentItem>
         <TableContentItem>
           <TableContentItemText>{item.amount}</TableContentItemText>
@@ -47,7 +51,9 @@ const Table = ({ headers, tableItems }: ITable) => (
           <TableContentItemText>{item.installmentsPayed}</TableContentItemText>
         </TableContentItem>
         <TableContentItem>
-          <TableContentItemText>{item.paymentDueDate}</TableContentItemText>
+          <TableContentItemText>
+            {setFormatDate('MMM dd', item.paymentDueDate)}
+          </TableContentItemText>
         </TableContentItem>
         <TableContentItem>
           <TableContentItemText>Authorize Credit</TableContentItemText>
