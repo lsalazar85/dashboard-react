@@ -29,6 +29,11 @@ export const Input = styled.input`
   color: ${colors.Gray300};
   font-size: 1rem;
   gap: 1.188rem;
+  
+  &[type="date"]{
+    appearance: none;
+    -webkit-appearance: none;
+  }
 `;
 
 export const InputValueMessageWrapper = styled.div`
