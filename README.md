@@ -13,8 +13,7 @@ but the requests are limited, so I decided not to implement it in order not to b
 ## Future Improvements
 - Develop and implement custom charts.
 - Add unit tests with React Testing Library.
-- Make a possible unification of the styles of the SideBar 
-component in both its desktop and mobile.
+- Improve SideBar styles component in both versions (desktop and mobile).
 - Add an API with more available requests to implement the useExchangeRate hook.
 - Improve search function and details.
 
